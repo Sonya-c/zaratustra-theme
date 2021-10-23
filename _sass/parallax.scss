@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+.parallax {
+    /* Set a specific height */
+    min-height: 500px;
+    max-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* The hero banner is in the index page */
+.hero-banner {
+    /* The text in the image must be centered */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    > * {
+        color: white;
+    }
+    
+    /* Remove h1 default style */
+    h1 {
+        margin: 0;
+        font-family: 'Homemade Apple', cursive;
+    }
+}

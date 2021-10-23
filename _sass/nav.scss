@@ -1,0 +1,111 @@
+$navbar-color: white;
+$navbar-text-color: black;
+$navbar-hightlight-color: #fed001;
+
+nav {
+    background-color: $navbar-color;
+    color: $navbar-text-color;
+    padding: 10px;
+    box-sizing: content-box;
+
+    /* bakcground opacity transition */
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: background-color 0.15s linear;
+    
+    /* menu bar sticy (always on top) */
+    top: 0;
+    left: 0;
+    position: sticky;
+    
+    /* There is float elements. If we want they be beside the other we should use clear  */
+    clear: both;
+    display: block;
+    
+    /* Shadow */
+    -webkit-box-shadow: -1px 7px 14px -6px rgba(0,0,0,0.37);
+    -moz-box-shadow: -1px 7px 14px -6px rgba(0,0,0,0.37);
+    box-shadow: -1px 7px 14px -6px rgba(0,0,0,0.37);
+
+    /* Remove default link style */
+    a {
+        color: black;
+        padding: 10px;
+        text-decoration: none;
+    }
+
+    #menu-bar-links {
+        a { 
+            transition: .2s;
+            border-radius: 10px;
+            
+            &:hover, &:active {
+                background-color: $navbar-hightlight-color;
+            }
+        }
+    }
+}
+
+
+
+/* Smaller smartphones */
+@media (max-width: 480px) {
+    nav {
+        box-sizing: content-box;
+        text-align: center;
+
+        /* This button is used in small device like phones.
+        In these cases, the button hide/show the menu bar link. */
+        button {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            cursor: pointer;
+            transition: transform 0.15s linear;
+
+            &:active {
+                background-color: #e6e6e6;
+            }
+        }
+
+    }
+
+
+
+    /* Hide the links at the beginning */
+    #menu-bar-links {
+        display: none;
+    }
+
+    /* Add transition style */
+    #menu-bar-links {
+        transition: display 5s linear;
+    }
+
+    /* Show the link one after the other */
+    nav a {
+        display: block;
+    }
+}
+
+/* Tablets, larger Smartphones, Laptops and desktops comupters */
+@media (min-width: 481px) {
+
+    /* This style is for the site name and the link container */
+    nav {
+
+        >* {
+            padding: 5px;
+            display: inline-block !important;
+        }
+
+        /* Hide the menu bar button */
+        button {
+            display: none;
+        }
+    }
+
+    /* Put the link to the right of the menu bar */
+    #menu-bar-links {
+        float: right;
+    }
+}

@@ -1,0 +1,19 @@
+<footer>
+    <div class="logo">
+        <img src="{{site.logo}}" alt="{{site.title}}">
+        <p>{{site.title}}</p>
+    </div>
+    <div class="description">
+        <p>
+            {{site.description}}
+        </p>
+    </div>
+    <div class="social-media">
+        <ul>
+            {% for item in site.data.social-media %}
+                <li><a href="{{item.url}}">{{item.name}}: {{item.username}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="footer-copyright">{{site.title}}</div>
+</footer>

@@ -1,0 +1,6 @@
+- name: Home
+  url: index
+- name: Gallery
+  url: gallery
+- name: Post
+  url: post
